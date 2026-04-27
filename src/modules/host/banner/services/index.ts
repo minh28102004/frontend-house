@@ -1,0 +1,1 @@
+export { HostBannerService, type CreateBannerDto, type UpdateBannerDto } from './banner.service';

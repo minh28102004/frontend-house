@@ -1,0 +1,41 @@
+.viewControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.viewLabel {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink30);
+}
+
+.viewToggle {
+  display: flex;
+  gap: 4px;
+}
+
+.viewBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--ink10);
+  border-radius: 2px;
+  cursor: pointer;
+  color: var(--ink30);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.viewBtn.active,
+.viewBtn:hover {
+  color: var(--ink);
+  border-color: var(--ink30);
+  background: var(--white);
+}

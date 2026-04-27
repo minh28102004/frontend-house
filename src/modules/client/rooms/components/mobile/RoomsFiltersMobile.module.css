@@ -1,0 +1,56 @@
+.filters {
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  background: rgba(244, 239, 230, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ink10);
+  padding: 0 20px;
+}
+
+.filtersScroll {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filtersScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.filterBtn {
+  flex-shrink: 0;
+  padding: 16px 14px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink60);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.filterBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.active {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.active::after {
+  transform: scaleX(1);
+}

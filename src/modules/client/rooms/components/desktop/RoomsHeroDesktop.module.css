@@ -1,0 +1,116 @@
+.hero {
+  padding-top: 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+}
+
+.heroBgImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+.heroBgGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 30%, var(--cream) 100%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  padding: 80px 40px 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .heroInner {
+    padding: 60px 20px 48px;
+  }
+}
+
+.heroLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heroLabel span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 8vw, 110px);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin: 0;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.heroBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.heroDesc {
+  font-size: 15px;
+  color: rgba(244, 239, 230, 0.6);
+  line-height: 1.75;
+  max-width: 440px;
+}
+
+.heroBook {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid rgba(244, 239, 230, 0.3);
+  text-decoration: none;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.heroBook:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}

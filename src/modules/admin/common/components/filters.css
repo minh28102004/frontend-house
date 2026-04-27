@@ -1,0 +1,56 @@
+/*
+  Standardized styles for admin filter controls.
+  Ensures uniform height, border radius, and seamless Input.Search button integration.
+*/
+
+/* Base control height and radius (matches Ant Design token controlHeight: 36px) */
+.ah-admin-input .ant-input,
+.ah-admin-antd-select .ant-select-selector,
+.ah-admin-antd-search .ant-input {
+  height: 36px !important;
+  min-height: 36px;
+  border-radius: 8px !important;
+  padding: 0 11px;
+}
+
+/* Ensure Select dropdown arrow aligns */
+.ah-admin-antd-select .ant-select-selector {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Input.Search: merge input and button */
+.ah-admin-antd-search .ant-input-group {
+  display: flex;
+}
+
+.ah-admin-antd-search .ant-input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.ah-admin-antd-search .ant-input-group-addon .ant-btn {
+  height: 36px !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: 1px solid #d9d9d9;
+  padding: 0 11px;
+}
+
+/* Button used for filter actions */
+.ah-admin-btn {
+  height: 36px !important;
+  border-radius: 8px !important;
+}
+
+/* Ensure vertical alignment of all filter items */
+.ah-admin-filter-bar .ah-admin-filter-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Consistent spacing between filter controls */
+.ah-admin-filter-bar {
+  gap: 12px;
+}

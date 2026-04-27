@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+.footer * {
+  box-sizing: border-box;
+}
+
+.footer {
+  background: var(--ah-ink, #191614);
+  color: var(--ah-cream, #F4EFE6);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Top strip ── */
+.footerTop {
+  border-bottom: 1px solid rgba(244, 239, 230, 0.06);
+  padding: 64px 40px 56px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px 20px 40px;
+  }
+}
+
+/* Brand column */
+.brand {}
+
+.brandName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--ah-cream, #F4EFE6);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.brandDesc {
+  font-size: 13px;
+  color: rgba(244, 239, 230, 0.4);
+  line-height: 1.75;
+  max-width: 260px;
+  margin-bottom: 28px;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taglineLine {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--ah-gold, #C4944A);
+  flex-shrink: 0;
+}
+
+.taglineText {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.25);
+}
+
+/* Nav columns */
+.colTitle {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.3);
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  font-size: 14px;
+  color: rgba(244, 239, 230, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link:hover {
+  color: var(--ah-gold, #C4944A);
+}
+
+.linkHighlight {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(244, 239, 230, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkHighlight:hover {
+  color: var(--ah-gold, #C4944A);
+}
+
+.linkArrow {
+  transition: transform 0.2s;
+}
+
+.linkHighlight:hover .linkArrow {
+  transform: translateX(3px);
+}
+
+/* ── Bottom bar ── */
+.footerBottom {
+  border-top: 1px solid rgba(244, 239, 230, 0.06);
+  padding: 0 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .footerBottom {
+    padding: 0 20px;
+  }
+}
+
+.bottomInner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.2);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(244, 239, 230, 0.1);
+  border-radius: 2px;
+  color: rgba(244, 239, 230, 0.3);
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.social:hover {
+  color: var(--ah-gold, #C4944A);
+  border-color: var(--ah-gold, #C4944A);
+}
+
+/* Marquee divider above footer */
+.marquee {
+  background: rgba(244, 239, 230, 0.03);
+  border-top: 1px solid rgba(244, 239, 230, 0.06);
+  border-bottom: 1px solid rgba(244, 239, 230, 0.06);
+  padding: 14px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marqueeInner {
+  display: inline-flex;
+  gap: 0;
+  animation: ahMarquee 28s linear infinite;
+}
+
+.marquee:hover .marqueeInner {
+  animation-play-state: paused;
+}
+
+@keyframes ahMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marqueeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.18);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+.marqueeDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--ah-gold, #C4944A);
+  opacity: 0.6;
+  flex-shrink: 0;
+}

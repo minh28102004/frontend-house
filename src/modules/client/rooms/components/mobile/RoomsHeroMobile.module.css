@@ -1,0 +1,92 @@
+.hero {
+  position: relative;
+  padding-top: 60px;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=50');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, var(--cream) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 40px 20px 32px;
+}
+
+.heroLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.heroLabel span {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 0.92;
+  color: var(--cream);
+  margin: 0;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.heroDesc {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(244, 239, 230, 0.55);
+  line-height: 1.7;
+}
+
+.heroBook {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px 20px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--cream);
+  background: transparent;
+  border: 1px solid rgba(244, 239, 230, 0.3);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.heroBook:active {
+  background: var(--gold);
+  border-color: var(--gold);
+}

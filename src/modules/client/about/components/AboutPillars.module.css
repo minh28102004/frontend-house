@@ -1,0 +1,149 @@
+.pillars {
+  padding: 0 0 140px;
+}
+
+.pillarsInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 900px) {
+  .pillarsInner {
+    padding: 0 20px;
+  }
+}
+
+.pillarsHeader {
+  margin-bottom: 64px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.pillarsHeaderLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pillarsHeaderLabel span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.pillarsTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--ink);
+  margin: 0;
+}
+
+.pillarsTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.pillarsSubtitle {
+  max-width: 300px;
+  font-size: 14px;
+  color: var(--ink60);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+@media (max-width: 1024px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pillarCard {
+  background: var(--white);
+  border: 1px solid var(--ink10);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.pillarCard:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+.pillarCardNum {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.pillarCardIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink10);
+  border-radius: 2px;
+  color: var(--ink30);
+}
+
+.pillarCardName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.pillarCardDesc {
+  font-size: 13px;
+  color: var(--ink60);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.pillarCardDeco {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px;
+  font-weight: 300;
+  color: rgba(25, 22, 20, 0.03);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}

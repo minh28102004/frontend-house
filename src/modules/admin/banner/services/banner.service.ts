@@ -1,0 +1,111 @@
+import { Banner } from '@/modules/admin/banner/models/banner.model';
+import { config } from '@/config/config';
+import api from '@/config/api';
+import { API_URL_CLIENT } from '@/config/apiRoutes';
+
+const API_URL = API_URL_CLIENT + config.ROUTES.BANNERS.BASE;
+
+export interface CreateBannerDto {
+  imagePath: string;
+  type: 'home' | 'home-mobile' | 'posts' | 'products' | 'contact';
+  backgroundType?: 'video' | 'image';
+  isActive?: boolean;
+  order: number;
+  link?: string;
+  title?: string;
+  description?: string;
+  position?: string;
+}
+
+export interface UpdateBannerDto extends Partial<CreateBannerDto> { }
+
+export const AdminBannerService = {
+  /**
+   * Lấy danh sách banner
+   */
+  async getBanners(type?: string, isActive?: boolean): Promise<Banner[]> {
+    const params = new URLSearchParams();
+    if (type) params.append('type', type);
+    if (isActive !== undefined) params.append('isActive', String(isActive));
+
+    const response = await api.get(`${API_URL}?${params.toString()}`);
+    return response.data;
+  },
+
+  /**
+   * Lấy chi tiết banner
+   */
+  async getBannerById(id: string): Promise<Banner> {
+    const response = await api.get(`${API_URL}/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+    return response.data;
+  },
+
+  /**
+   * Tạo banner mới
+   */
+  async createBanner(data: CreateBannerDto): Promise<Banner> {
+    const response = await api.post(API_URL, data, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+    return response.data;
+  },
+
+  /**
+   * Cập nhật banner
+   */
+  async updateBanner(id: string, data: UpdateBannerDto): Promise<Banner> {
+    const response = await api.patch(`${API_URL}/${id}`, data, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+    return response.data;
+  },
+
+  /**
+   * Cập nhật thứ tự banner
+   */
+  async updateBannerOrder(id: string, order: number): Promise<Banner> {
+    const response = await api.patch(`${API_URL}/${id}/order`, { order }, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+    return response.data;
+  },
+
+  /**
+   * Bật/tắt trạng thái banner
+   */
+  async toggleBannerActive(id: string): Promise<Banner> {
+    const response = await api.patch(`${API_URL}/${id}/toggle-active`, {}, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+    return response.data;
+  },
+
+  /**
+   * Xóa banner
+   */
+  async deleteBanner(id: string): Promise<void> {
+    await api.delete(`${API_URL}/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
+  }
+};

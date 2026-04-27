@@ -1,0 +1,87 @@
+.hero {
+  background: var(--ink);
+  padding: 80px 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=800&q=50');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.heroLabel span {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 0.92;
+  color: var(--cream);
+  margin: 0;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.heroDesc {
+  margin-top: 16px;
+  font-size: 14px;
+  color: rgba(244, 239, 230, 0.5);
+  line-height: 1.7;
+}
+
+.heroHours {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(244, 239, 230, 0.1);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.heroHourLabel {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.35);
+  margin-bottom: 4px;
+}
+
+.heroHourValue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--cream);
+}

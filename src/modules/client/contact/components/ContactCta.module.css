@@ -1,0 +1,112 @@
+.sideCta {
+  background: var(--ink);
+  padding: 40px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.sideCtaDeco {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 160px;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+.sideCtaLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sideCtaLabel span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.sideCtaTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--cream);
+  margin: 0 0 16px;
+}
+
+.sideCtaTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.sideCtaBody {
+  font-size: 13px;
+  color: rgba(244, 239, 230, 0.45);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.sideCtaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.btnGold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--gold);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.btnGold:hover {
+  background: #d4aa6a;
+}
+
+.btnGhostDark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(244, 239, 230, 0.45);
+  border: 1px solid rgba(244, 239, 230, 0.15);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.btnGhostDark:hover {
+  color: var(--cream);
+  border-color: rgba(244, 239, 230, 0.4);
+}

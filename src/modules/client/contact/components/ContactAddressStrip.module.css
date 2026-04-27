@@ -1,0 +1,43 @@
+.addressStrip {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--ink10);
+}
+
+.addressCell {
+  flex: 1;
+  padding: 28px 32px;
+  border-right: 1px solid var(--ink10);
+}
+
+.addressCell:last-child {
+  border-right: none;
+}
+
+@media (max-width: 600px) {
+  .addressStrip {
+    flex-direction: column;
+  }
+
+  .addressCell {
+    border-right: none;
+    border-bottom: 1px solid var(--ink10);
+  }
+}
+
+.addressCellLabel {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink30);
+  margin-bottom: 8px;
+}
+
+.addressCellValue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--ink);
+  white-space: pre-line;
+}

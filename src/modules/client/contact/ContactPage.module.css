@@ -1,0 +1,229 @@
+/* Desktop layout */
+.contactMain {
+  padding: 0 0 120px;
+}
+
+.contactGrid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mapCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.mapNote {
+  padding: 14px 20px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink30);
+  background: var(--parchment);
+  border-top: 1px solid var(--ink10);
+}
+
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--ink10);
+  border-left: none;
+}
+
+@media (max-width: 1024px) {
+  .sidePanel {
+    border-left: 1px solid var(--ink10);
+    border-top: none;
+  }
+}
+
+/* Mobile layout */
+.mapNoteMobile {
+  padding: 12px 20px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink30);
+  background: var(--parchment);
+}
+
+.addressCardsMobile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--ink10);
+}
+
+.addressCard {
+  padding: 16px 12px;
+  background: var(--white);
+  text-align: center;
+}
+
+.addressCardLabel {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink30);
+  margin-bottom: 6px;
+}
+
+.addressCardValue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.ctaMobile {
+  background: var(--ink, #191614);
+  padding: 40px 20px;
+  color: var(--cream, #f4efe6);
+}
+
+.ctaLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ctaLabel span {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.ctaTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.0;
+  margin: 0;
+}
+
+.ctaTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.ctaBody {
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(244, 239, 230, 0.45);
+  line-height: 1.7;
+}
+
+.ctaActions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btnGold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--gold);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btnGold:active {
+  background: #d4aa6a;
+}
+
+.btnOutlineLight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.88);
+  text-decoration: none;
+  border: 1px solid rgba(244, 239, 230, 0.45);
+  border-radius: 4px;
+}
+
+.btnOutlineLight:active {
+  background: rgba(244, 239, 230, 0.1);
+  color: var(--cream);
+}
+
+.infoStrip {
+  background: var(--ink, #191614);
+  padding: 16px 20px;
+  border-top: 1px solid rgba(244, 239, 230, 0.06);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.infoStripInner {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.62);
+}
+
+.infoDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Mobile contact form section */
+.contactFormSection {
+  background: var(--ink, #191614);
+  padding: 32px 20px;
+}
+
+.contactFormTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--cream, #f4efe6);
+  margin: 0 0 24px;
+}

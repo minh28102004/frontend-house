@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero";
+export { default as Marquee } from "./Marquee";
+export { default as BannerHome } from "./BannerHome";
+export { default as Intro } from "./Intro";
+export { default as Rooms } from "./Rooms";
+export { default as Concepts } from "./Concepts";
+export { default as Reviews } from "./Reviews";
+export { default as Cta } from "./Cta";
+export { default as RevealObserver } from "./RevealObserver";

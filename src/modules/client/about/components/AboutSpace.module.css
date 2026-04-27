@@ -1,0 +1,145 @@
+.spaceSection {
+  padding: 0 0 140px;
+  background: var(--ink);
+}
+
+.spaceTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+
+@media (max-width: 900px) {
+  .spaceTop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spaceImgWrap {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.spaceImg {
+  object-fit: cover;
+  opacity: 0.75;
+  transition: transform 7s ease;
+}
+
+.spaceImgWrap:hover .spaceImg {
+  transform: scale(1.03);
+}
+
+.spaceContent {
+  padding: 80px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--cream);
+}
+
+@media (max-width: 767px) {
+  .spaceContent {
+    padding: 56px 20px;
+  }
+}
+
+.spaceLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.spaceLabel span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.goldLine {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.spaceTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 4vw, 60px);
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--cream);
+  margin: 0;
+}
+
+.spaceTitle em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.spaceBody {
+  margin-top: 24px;
+  font-size: 15px;
+  color: rgba(244, 239, 230, 0.55);
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.spaceAmenities {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.spaceAmenity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(244, 239, 230, 0.55);
+}
+
+.spaceAmenityDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.spaceGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin: 2px 0 0;
+}
+
+@media (max-width: 600px) {
+  .spaceGallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.spaceGalleryItem {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: #111;
+}
+
+.spaceGalleryImg {
+  object-fit: cover;
+  opacity: 0.65;
+  transition: opacity 0.4s, transform 0.7s ease;
+}
+
+.spaceGalleryItem:hover .spaceGalleryImg {
+  opacity: 0.9;
+  transform: scale(1.04);
+}
