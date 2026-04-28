@@ -171,10 +171,8 @@ export default function Hero() {
 <section
   className="relative hidden md:flex items-center overflow-hidden bg-black"
   style={{
-    width: "100vw",
-    marginLeft: "calc(50% - 50vw)",
-    marginRight: "calc(50% - 50vw)",
-    height: "calc(100vh - 78px)",
+    width: "100%",
+    height: "calc(100svh - var(--site-header-height))",
     minHeight: 560,
   }}
 >

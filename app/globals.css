@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+:root {
+  --site-header-height: 61px;
+}
+@media (min-width: 768px) {
+  :root {
+    --site-header-height: 69px;
+  }
+}
+
 @theme {
   --font-*: initial;
   --font-outfit: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -49,6 +58,15 @@
 
 /*
   Shorthand design tokens for CSS Modules (contact / about / rooms).
+:root {
+  --site-header-height: 61px;
+}
+@media (min-width: 768px) {
+  :root {
+    --site-header-height: 69px;
+  }
+}
+
   Modules use var(--ink), var(--cream), etc.; @theme only defines --color-*.
 */
 :root {

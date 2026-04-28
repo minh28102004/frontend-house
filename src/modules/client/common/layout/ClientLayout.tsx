@@ -18,6 +18,7 @@ interface LayoutProps {
 const ClientLayout = ({ children }: LayoutProps) => {
   const pathname = usePathname();
   const isProductDetailPage = pathname?.startsWith("/san-pham/");
+  const isHomePage = pathname === "/";
 
   return (
     <div className="min-h-screen bg-white">
@@ -25,7 +26,7 @@ const ClientLayout = ({ children }: LayoutProps) => {
       <Menu />
 
       {/* Noi dung chinh */}
-      <main className="container mx-auto pb-16 md:pb-0">
+      <main className={`${isHomePage ? "" : "container mx-auto"} pb-16 md:pb-0`}>
         {children}
       </main>
 

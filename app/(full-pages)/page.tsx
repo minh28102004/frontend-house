@@ -5,8 +5,8 @@ import React from "react";
 
 export default function Page() {
   return (
-    <main className="pt-[78px] overflow-x-hidden">
+    <div style={{ paddingTop: 'var(--site-header-height)' }}>
       <HomePage />
-    </main>
+    </div>
   );
 }
